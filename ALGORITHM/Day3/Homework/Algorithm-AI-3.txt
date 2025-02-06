@@ -1,0 +1,51 @@
+1. Pseudocode (5 elementi (a, b, c, d. e))
+
+largest = a;
+if (largest < b)
+  largest = b;
+if (largest < c)
+  largest = c;
+if (largest < d)
+  largest = c;
+if (largest < e)
+  largest = e;
+return largest;     
+
+
+2. წრიული დიაგრამა/Pie Chart
+1 Assignments: ეს ხდება მხოლოდ მაშინ, როდესაც a არის ყველაზე დიდი ელემენტი. არის 4! = 24 გზა სხვა ელემენტების მოწყობისთვის (b, c, d, e). ალბათობა = 24/120 = 1/5.
+2 Assignments: b არის largest და a < b. ჩვენ უნდა დავთვალოთ შეთანხმებების რაოდენობა სადაც b არის უდიდესი(largest) და a მოდის b-ს წინ საწყის შედარებაში.
+3 Assignments: c არის largest და წინა(previous), თუ წინადადებები(statements) მოითხოვს a < b და ერთ-ერთი მათგანი c-ზე პატარა.
+4 Assignments: d არის largest და წინა(previous), თუ წინადადებები(statements) მოითხოვს a, b, c < d.
+4 Assignments: e არის largest და წინა(previous), თუ წინადადებები(statements) მოითხოვს a, b, c, d < e.
+
+K Assignments: სადაც X ელემენტია largest (სადაც X არის b, c, d, e-დან ერთ-ერთი). ჩვენ გვჭირდება X ელემენტი რომ იყოს უფრო დიდი ვიდრე ყველა წინა.
+დავალებების გამოთვლა უდიდესი ელემენტის გამოყენებით: შეგვიძლია გავამარტივოთ ელემენტის მინიჭებით. 2 Assignments-თვის, სიის მე-2 ელემენტი უნდა იყოს ყველაზე დიდი(largest), 3 მესამესთვის, 4 მეოთხესთვის და 5 მეხუთესთვის.
+
+1 Assignments: b არის largest element "a, b, c, d, e."-ში. დარჩენილი ელემენტების მოწყობის(arrange) 4 გზა არსებობს (b-ს გარდა). ეს არის 24/100.
+2 Assignments: c არის largest element. ესეც არის 24/120.
+3 Assignments: d არის largest element. ესეც არის 24/120.
+4 Assignments: e არის largest element. ესეც არის 24/120.
+
+ახლა შეგვიძლია განვსაზღვროთ წრიული დიაგრამა/Pie Chart
+1 Assignments (largest a): 24/120 = 1/5 = 24%
+2 Assignments (largest b): 24/120 = 1/5 = 24%
+3 Assignments (largest c): 24/120 = 1/5 = 24%
+4 Assignments (largest d): 24/120 = 1/5 = 24%
+5 Assignments (largest e): 24/120 = 1/5 = 24%
+
+
+3. განვსაზღვროთ T(k) როგორც დავალების მთლიანი სირთულე. განვსაზღვროთ მთლიანი სირთულე და ალბათობა. ფორმატში [complexity]:probability
+1: 24/120
+2: 24/120
+3: 24/120
+4: 24/120
+5: 24/120
+
+
+4. Calculation of Expected Time(Average Assignment Complexity)/მინიჭების სირთულის ფუნქციის საშუალო (ET)
+ET = Σ
+ET = (1 * 24/120) + (2 * 24/120) + (3 * 24/120) + (4 * 24/120) + (5 * 24/120)
+ET = (24/120) * (1 + 2 + 3 + 4 + 5)
+ET = (1/5) * (15)
+ET = 3
